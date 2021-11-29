@@ -54,11 +54,28 @@
                     <navigationItem key="navigationItem" id="560-oD-dQD"/>
                     <connections>
                         <outlet property="mapView" destination="B2c-Jb-X7h" id="J1Q-g2-j1K"/>
+                        <segue destination="Yac-9v-HLq" kind="show" identifier="showPinTouchView" id="W57-RQ-2Y0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRD-rm-IvZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="124"/>
+            <point key="canvasLocation" x="1817" y="124"/>
+        </scene>
+        <!--Pin Touch View Controller-->
+        <scene sceneID="0UZ-Bf-FIx">
+            <objects>
+                <viewController storyboardIdentifier="pinTouchViewController" id="Yac-9v-HLq" customClass="pinTouchViewController" customModule="myFavoriteToilet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQV-NE-Xy9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5ZZ-rY-7NJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wnZ-Ps-OgJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gwj-Pq-b4Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2732" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FbK-Ho-jPi">

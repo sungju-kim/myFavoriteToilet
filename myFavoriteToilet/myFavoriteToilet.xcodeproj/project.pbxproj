@@ -14,6 +14,8 @@
 		6C09C0FE2754D2FD003BB3F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C09C0FD2754D2FD003BB3F3 /* Assets.xcassets */; };
 		6C09C1012754D2FD003BB3F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C09C0FF2754D2FD003BB3F3 /* LaunchScreen.storyboard */; };
 		6C09C1092754D354003BB3F3 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C09C1082754D354003BB3F3 /* mapViewController.swift */; };
+		6C7E5258275508C400B146A6 /* pinTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E5257275508C400B146A6 /* pinTouchViewController.swift */; };
+		6C7E525A27550ED200B146A6 /* pinTouched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E525927550ED200B146A6 /* pinTouched.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		6C09C1002754D2FD003BB3F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C09C1022754D2FD003BB3F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C09C1082754D354003BB3F3 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		6C7E52542755033100B146A6 /* loc.gpx */ = {isa = PBXFileReference; lastKnownFileType = text; path = loc.gpx; sourceTree = "<group>"; };
+		6C7E5255275503A800B146A6 /* gpx.gpx */ = {isa = PBXFileReference; lastKnownFileType = text; path = gpx.gpx; sourceTree = "<group>"; };
+		6C7E52562755044000B146A6 /* location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = location.gpx; sourceTree = "<group>"; };
+		6C7E5257275508C400B146A6 /* pinTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinTouchViewController.swift; sourceTree = "<group>"; };
+		6C7E525927550ED200B146A6 /* pinTouched.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinTouched.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,9 @@
 		6C09C0E82754D2FC003BB3F3 = {
 			isa = PBXGroup;
 			children = (
+				6C7E52562755044000B146A6 /* location.gpx */,
+				6C7E5255275503A800B146A6 /* gpx.gpx */,
+				6C7E52542755033100B146A6 /* loc.gpx */,
 				6C09C0F32754D2FC003BB3F3 /* myFavoriteToilet */,
 				6C09C0F22754D2FC003BB3F3 /* Products */,
 			);
@@ -62,6 +72,8 @@
 				6C09C0F62754D2FC003BB3F3 /* SceneDelegate.swift */,
 				6C09C0F82754D2FC003BB3F3 /* ViewController.swift */,
 				6C09C1082754D354003BB3F3 /* mapViewController.swift */,
+				6C7E5257275508C400B146A6 /* pinTouchViewController.swift */,
+				6C7E525927550ED200B146A6 /* pinTouched.swift */,
 				6C09C0FA2754D2FC003BB3F3 /* Main.storyboard */,
 				6C09C0FD2754D2FD003BB3F3 /* Assets.xcassets */,
 				6C09C0FF2754D2FD003BB3F3 /* LaunchScreen.storyboard */,
@@ -145,6 +157,8 @@
 				6C09C0F52754D2FC003BB3F3 /* AppDelegate.swift in Sources */,
 				6C09C0F72754D2FC003BB3F3 /* SceneDelegate.swift in Sources */,
 				6C09C1092754D354003BB3F3 /* mapViewController.swift in Sources */,
+				6C7E525A27550ED200B146A6 /* pinTouched.swift in Sources */,
+				6C7E5258275508C400B146A6 /* pinTouchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8ZQU3Y88G8;
@@ -308,6 +323,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dale.myFavoriteToilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,6 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8ZQU3Y88G8;
@@ -336,6 +353,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dale.myFavoriteToilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
