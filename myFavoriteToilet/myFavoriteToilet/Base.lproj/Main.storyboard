@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" id="560-oD-dQD"/>
                     <connections>
                         <outlet property="mapView" destination="B2c-Jb-X7h" id="J1Q-g2-j1K"/>
-                        <segue destination="Yac-9v-HLq" kind="show" identifier="showPinTouchView" id="W57-RQ-2Y0"/>
+                        <segue destination="Yac-9v-HLq" kind="show" identifier="showPinTouchView" destinationCreationSelector="MKAnnotation" id="W57-RQ-2Y0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRD-rm-IvZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -69,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5ZZ-rY-7NJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="wnZ-Ps-OgJ"/>
                 </viewController>
@@ -99,6 +99,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
