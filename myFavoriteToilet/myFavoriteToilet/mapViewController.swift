@@ -13,11 +13,7 @@ class Marker: NSObject, MKAnnotation {
     let subtitle: String?
     let coordinate: CLLocationCoordinate2D
     
-    init(
-        title: String?,
-        subtitle : String?,
-        coordinate: CLLocationCoordinate2D
-    ) {
+    init(title: String?, subtitle : String?, coordinate: CLLocationCoordinate2D) {
         self.title = title
         self.subtitle = subtitle
         self.coordinate = coordinate
@@ -39,12 +35,28 @@ class mapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.showsUserLocation = true
         spawnMarker()
 
-    }
+     }
+    
+    var selectedAnnotation: Marker?
 
     func mapView(_ mapView: MKMapView, didSelect view : MKAnnotationView) {
+        let destiationVC = pinTouchViewController()
+        self.selectedAnnotation = view.annotation as? Marker
         self.performSegue(withIdentifier: "showPinTouchView", sender: nil)
+        destiationVC.receivedMarker = selectedAnnotation!
     }
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showPintTouchView" {
+//                   print("1")
+//                   guard let destiationVC = segue.destination as? pinTouchViewController else{
+//                       return
+//                   }
+//                   print("2")
+//            destiationVC.receivedMarker = MKAnnotationView.annotation as? Marker?
+//                   print(destiationVC.receivedMarker)
+//                   print("3")
+//               }
+//    }
     func myLocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees, delta : Double) {
         let coordinateLocation = CLLocationCoordinate2DMake(latitude, longitude)
         let spanValue = MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
@@ -55,6 +67,7 @@ class mapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func spawnMarker() {
         toiletArray.forEach{createMarker($0)}
     }
+
     
     func createMarker(_ markerInform : [String]) {
         let title = markerInform[1]
@@ -73,3 +86,4 @@ class mapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     
 }
+
