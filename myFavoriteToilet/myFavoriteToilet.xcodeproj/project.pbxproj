@@ -15,6 +15,7 @@
 		6C09C1012754D2FD003BB3F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C09C0FF2754D2FD003BB3F3 /* LaunchScreen.storyboard */; };
 		6C09C1092754D354003BB3F3 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C09C1082754D354003BB3F3 /* mapViewController.swift */; };
 		6C7E5258275508C400B146A6 /* pinTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E5257275508C400B146A6 /* pinTouchViewController.swift */; };
+		6CD621F22756380B00815E4E /* YoonGothicPro740.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD621F1275637FB00815E4E /* YoonGothicPro740.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6C09C1022754D2FD003BB3F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C09C1082754D354003BB3F3 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		6C7E5257275508C400B146A6 /* pinTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinTouchViewController.swift; sourceTree = "<group>"; };
+		6CD621F1275637FB00815E4E /* YoonGothicPro740.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = YoonGothicPro740.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				6C09C0FD2754D2FD003BB3F3 /* Assets.xcassets */,
 				6C09C0FF2754D2FD003BB3F3 /* LaunchScreen.storyboard */,
 				6C09C1022754D2FD003BB3F3 /* Info.plist */,
+				6CD621F1275637FB00815E4E /* YoonGothicPro740.ttf */,
 			);
 			path = myFavoriteToilet;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 				6C09C1012754D2FD003BB3F3 /* LaunchScreen.storyboard in Resources */,
 				6C09C0FE2754D2FD003BB3F3 /* Assets.xcassets in Resources */,
 				6C09C0FC2754D2FC003BB3F3 /* Main.storyboard in Resources */,
+				6CD621F22756380B00815E4E /* YoonGothicPro740.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
