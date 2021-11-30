@@ -40,10 +40,13 @@ class mapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var selectedAnnotation: Marker?
 
     func mapView(_ mapView: MKMapView, didSelect view : MKAnnotationView) {
-        let destiationVC = pinTouchViewController()
         self.selectedAnnotation = view.annotation as? Marker
+        let v = pinTouchViewController.main
+        v?.updateUI(title: selectedAnnotation?.title ?? "", subTitle: selectedAnnotation?.subtitle ?? "")
         self.performSegue(withIdentifier: "showPinTouchView", sender: nil)
-        destiationVC.receivedMarker = selectedAnnotation!
+        DispatchQueue.main.async {
+            pinTouchViewController.main?.updateUI(title: self.selectedAnnotation?.title ?? "", subTitle: self.selectedAnnotation?.subtitle ?? "")
+        }
     }
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "showPintTouchView" {
