@@ -92,7 +92,7 @@ class mapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         guard let latitude = Double(markerInform[4]) else {return}
         guard let longitude = Double(markerInform[3]) else {return}
         let centerPosition = CLLocationCoordinate2DMake(37.49095718455182, 127.03348137068356)
-        let range = 1000.0
+        let range = 3000.0
         let myRange = CLCircularRegion(center: CLLocationCoordinate2D(latitude: centerPosition.latitude,longitude: centerPosition.longitude), radius: range, identifier: "myRange")
         let circle = MKCircle(center: centerPosition, radius: range)
         mapView.addOverlay(circle)
