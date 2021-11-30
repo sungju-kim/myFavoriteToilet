@@ -20,6 +20,7 @@ class Marker: NSObject, MKAnnotation {
         super.init()
     }
 }
+
 class mapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -36,42 +37,55 @@ class mapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         spawnMarker()
 
      }
-    
-    var selectedAnnotation: Marker?
-
-    func mapView(_ mapView: MKMapView, didSelect view : MKAnnotationView) {
-        self.selectedAnnotation = view.annotation as? Marker
-        let v = pinTouchViewController.main
-        v?.updateUI(title: selectedAnnotation?.title ?? "", subTitle: selectedAnnotation?.subtitle ?? "")
-        self.performSegue(withIdentifier: "showPinTouchView", sender: nil)
-        DispatchQueue.main.async {
-            pinTouchViewController.main?.updateUI(title: self.selectedAnnotation?.title ?? "", subTitle: self.selectedAnnotation?.subtitle ?? "")
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        mapView.reloadInputViews()
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showPintTouchView" {
-//                   print("1")
-//                   guard let destiationVC = segue.destination as? pinTouchViewController else{
-//                       return
-//                   }
-//                   print("2")
-//            destiationVC.receivedMarker = MKAnnotationView.annotation as? Marker?
-//                   print(destiationVC.receivedMarker)
-//                   print("3")
-//               }
-//    }
+    
+    var annotationTitle = ""
+    var annotationSubTitle = ""
+    var selectedAnnotation: Marker?
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            if annotation is MKUserLocation { return nil }
+
+            if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "") {
+                annotationView.annotation = annotation
+                return annotationView
+            } else {
+                let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:"")
+                annotationView.isEnabled = true
+                annotationView.canShowCallout = true
+
+                let btn = UIButton(type: .detailDisclosure)
+                annotationView.rightCalloutAccessoryView = btn
+                btn.addTarget(self, action: #selector(didClickDetailDisclosure(button:)), for: .touchUpInside)
+                return annotationView
+            }
+        }
+    
+    @objc func didClickDetailDisclosure(button: UIButton) {
+        performSegue(withIdentifier: "showPinTouchView", sender: nil)
+       }
+    
+    func mapView(_ mapView: MKMapView, didSelect view : MKAnnotationView) {
+        annotationTitle = view.annotation!.title!!
+        annotationSubTitle = view.annotation!.subtitle!!
+        pinTouchViewController.pinTitle = annotationTitle
+        pinTouchViewController.pinSubTitle = annotationSubTitle
+        
+    }
+
+    
+    
     func myLocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees, delta : Double) {
         let coordinateLocation = CLLocationCoordinate2DMake(latitude, longitude)
         let spanValue = MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
         let locationRegion = MKCoordinateRegion(center: coordinateLocation, span: spanValue)
         mapView.setRegion(locationRegion, animated: true)
     }
-    
     func spawnMarker() {
         toiletArray.forEach{createMarker($0)}
     }
-
-    
     func createMarker(_ markerInform : [String]) {
         let title = markerInform[1]
         let subtitle = markerInform[2]
@@ -84,9 +98,6 @@ class mapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let lastLocation = locations.last
         myLocation(latitude: (lastLocation?.coordinate.latitude)!, longitude: (lastLocation?.coordinate.longitude)!, delta: 0.01)
     }
-    
-    
-    
     
 }
 
