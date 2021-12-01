@@ -108,19 +108,9 @@
                         <viewLayoutGuide key="safeArea" id="ncC-Fe-Ncy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="560-oD-dQD">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="amP-pn-uIl">
-                            <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="범위 (M)" textAlignment="natural" minimumFontSize="17" id="iet-yg-GVZ">
-                                <rect key="frame" x="288" y="5" width="86" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="560-oD-dQD"/>
                     <connections>
                         <outlet property="mapView" destination="B2c-Jb-X7h" id="J1Q-g2-j1K"/>
-                        <outlet property="typedRange" destination="amP-pn-uIl" id="AbM-As-8z2"/>
                         <segue destination="Yac-9v-HLq" kind="show" identifier="showPinTouchView" destinationCreationSelector="MKAnnotation" id="W57-RQ-2Y0"/>
                     </connections>
                 </viewController>
