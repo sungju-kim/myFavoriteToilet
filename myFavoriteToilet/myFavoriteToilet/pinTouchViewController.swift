@@ -68,9 +68,53 @@ class pinTouchViewController: UIViewController{
         self.imageView.alpha = 0
         self.starRates.alpha = 0
         insertImage()
+        randomStar()
         fadeInOutA()
         
         
+    }
+    func randomStar() {
+        let ranNum = Int.random(in: 1...5)
+        print(ranNum)
+        switch ranNum {
+        case 1:
+            btnOne.setTitle("★", for: .normal)
+            btnTwo.setTitle("☆", for: .normal)
+            btnThree.setTitle("☆", for: .normal)
+            btnFour.setTitle("☆", for: .normal)
+            btnFive.setTitle("☆", for: .normal)
+        case 2:
+            btnOne.setTitle("★", for: .normal)
+            btnTwo.setTitle("★", for: .normal)
+            btnThree.setTitle("☆", for: .normal)
+            btnFour.setTitle("☆", for: .normal)
+            btnFive.setTitle("☆", for: .normal)
+        case 3:
+            btnOne.setTitle("★", for: .normal)
+            btnTwo.setTitle("★", for: .normal)
+            btnThree.setTitle("★", for: .normal)
+            btnFour.setTitle("☆", for: .normal)
+            btnFive.setTitle("☆", for: .normal)
+        case 4:
+            btnOne.setTitle("★", for: .normal)
+            btnTwo.setTitle("★", for: .normal)
+            btnThree.setTitle("★", for: .normal)
+            btnFour.setTitle("★", for: .normal)
+            btnFive.setTitle("☆", for: .normal)
+        case 5:
+            btnOne.setTitle("★", for: .normal)
+            btnTwo.setTitle("★", for: .normal)
+            btnThree.setTitle("★", for: .normal)
+            btnFour.setTitle("★", for: .normal)
+            btnFive.setTitle("★", for: .normal)
+        default:
+            btnOne.setTitle("★", for: .normal)
+            btnTwo.setTitle("☆", for: .normal)
+            btnThree.setTitle("☆", for: .normal)
+            btnFour.setTitle("☆", for: .normal)
+            btnFive.setTitle("☆", for: .normal)
+
+        }
     }
     
     func insertImage() {
