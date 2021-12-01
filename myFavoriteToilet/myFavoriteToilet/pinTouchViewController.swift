@@ -95,7 +95,6 @@ class pinTouchViewController: UIViewController, UITextFieldDelegate{
     }
     func randomStar() {
         let ranNum = Int.random(in: 1...5)
-        print(ranNum)
         switch ranNum {
         case 1:
             btnOne.setTitle("★", for: .normal)
@@ -182,9 +181,7 @@ class pinTouchViewController: UIViewController, UITextFieldDelegate{
             return true
         }
     func loadStack() {
-        let stackedCount = thredStack.count
-        print(thredStack)
-        
+        let stackedCount = thredStack.count 
         switch stackedCount {
         case 1:
             stack1.text = "\(thredStack[0])"
