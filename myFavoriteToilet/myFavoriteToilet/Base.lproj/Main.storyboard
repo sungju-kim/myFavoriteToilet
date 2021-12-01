@@ -158,7 +158,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SJk-lp-dlS">
                                                 <rect key="frame" x="16" y="348" width="358" height="31"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo5-8U-4Al">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo5-8U-4Al">
                                                         <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="31"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
@@ -167,7 +167,7 @@
                                                             <action selector="btnOne:" destination="Yac-9v-HLq" eventType="touchUpInside" id="Nus-U2-Q4J"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu5-ou-cJU">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu5-ou-cJU">
                                                         <rect key="frame" x="77.666666666666671" y="0.0" width="47.666666666666671" height="31"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
@@ -176,8 +176,8 @@
                                                             <action selector="btnTwo:" destination="Yac-9v-HLq" eventType="touchUpInside" id="FUb-6a-3No"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOy-JQ-rwI">
-                                                        <rect key="frame" x="155.33333333333334" y="0.0" width="56.666666666666657" height="31"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOy-JQ-rwI">
+                                                        <rect key="frame" x="155.33333333333334" y="0.0" width="47.333333333333343" height="31"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="☆"/>
@@ -185,8 +185,8 @@
                                                             <action selector="btnThree:" destination="Yac-9v-HLq" eventType="touchUpInside" id="yWw-9r-MoP"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-xl-hC3">
-                                                        <rect key="frame" x="241.99999999999997" y="0.0" width="47.666666666666657" height="31"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-xl-hC3">
+                                                        <rect key="frame" x="232.66666666666666" y="0.0" width="47.666666666666657" height="31"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="☆"/>
@@ -195,7 +195,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20R-A5-VBy">
-                                                        <rect key="frame" x="319.66666666666669" y="0.0" width="38.333333333333314" height="31"/>
+                                                        <rect key="frame" x="310.33333333333331" y="0.0" width="47.666666666666686" height="31"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="☆"/>
