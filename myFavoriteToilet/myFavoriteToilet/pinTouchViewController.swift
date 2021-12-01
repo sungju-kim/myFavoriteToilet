@@ -8,11 +8,13 @@
 import UIKit
 import MapKit
 
-class pinTouchViewController: UIViewController{
+class pinTouchViewController: UIViewController, UITextFieldDelegate{
+    var thredStack : [String] = []
     @IBOutlet weak var imageView: UIImageView!
     static var pinTitle : String?
     static var pinSubTitle : String?
     
+    @IBOutlet weak var typeSection: UITextField!
     @IBOutlet weak var btnOne: UIButton!
     @IBOutlet weak var btnTwo: UIButton!
     @IBOutlet weak var btnThree: UIButton!
@@ -21,8 +23,24 @@ class pinTouchViewController: UIViewController{
     @IBOutlet weak var touchedPinTitle: UILabel!
     @IBOutlet weak var touchedPinSubTitle: UILabel!
     @IBOutlet weak var starRates: UIStackView!
+    @IBOutlet weak var stack1: UILabel!
+    @IBOutlet weak var stack2: UILabel!
+    @IBOutlet weak var stack3: UILabel!
+    @IBOutlet weak var stack4: UILabel!
+    @IBOutlet weak var stack5: UILabel!
+    @IBOutlet weak var stack6: UILabel!
     
-    
+    @IBAction func writeThred(_ sender : Any) {
+        if typeSection.text == "" {
+            return
+        }
+        thredStack.append(typeSection.text!)
+        typeSection.text = ""
+        if thredStack.count == 7 {
+            thredStack.removeFirst()
+        }
+        loadStack()
+    }
     @IBAction func btnOne(_ sender: Any) {
         btnOne.setTitle("★", for: .normal)
         btnTwo.setTitle("☆", for: .normal)
@@ -67,8 +85,10 @@ class pinTouchViewController: UIViewController{
         self.touchedPinSubTitle.alpha = 0
         self.imageView.alpha = 0
         self.starRates.alpha = 0
+        self.typeSection.delegate = self
         insertImage()
         randomStar()
+        loadStack()
         fadeInOutA()
         
         
@@ -154,6 +174,69 @@ class pinTouchViewController: UIViewController{
             self.starRates.alpha = 1.0
         })
 
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            if textField == self.typeSection {
+                self.writeThred(self)
+            }
+            return true
+        }
+    func loadStack() {
+        let stackedCount = thredStack.count
+        print(thredStack)
+        
+        switch stackedCount {
+        case 1:
+            stack1.text = "\(thredStack[0])"
+            stack2.text = ""
+            stack3.text = ""
+            stack4.text = ""
+            stack5.text = ""
+            stack6.text = ""
+        case 2:
+            stack1.text = "\(thredStack[1])"
+            stack2.text = "\(thredStack[0])"
+            stack3.text = ""
+            stack4.text = ""
+            stack5.text = ""
+            stack6.text = ""
+        case 3:
+            stack1.text = "\(thredStack[2])"
+            stack2.text = "\(thredStack[1])"
+            stack3.text = "\(thredStack[0])"
+            stack4.text = ""
+            stack5.text = ""
+            stack6.text = ""
+        case 4:
+            stack1.text = "\(thredStack[3])"
+            stack2.text = "\(thredStack[2])"
+            stack3.text = "\(thredStack[1])"
+            stack4.text = "\(thredStack[0])"
+            stack5.text = ""
+            stack6.text = ""
+        case 5:
+            stack1.text = "\(thredStack[4])"
+            stack2.text = "\(thredStack[3])"
+            stack3.text = "\(thredStack[2])"
+            stack4.text = "\(thredStack[1])"
+            stack5.text = "\(thredStack[0])"
+            stack6.text = ""
+        case 6:
+            stack1.text = "\(thredStack[5])"
+            stack2.text = "\(thredStack[4])"
+            stack3.text = "\(thredStack[3])"
+            stack4.text = "\(thredStack[2])"
+            stack5.text = "\(thredStack[1])"
+            stack6.text = "\(thredStack[0])"
+            
+        default:
+            stack1.text = ""
+            stack2.text = ""
+            stack3.text = ""
+            stack4.text = ""
+            stack5.text = ""
+            stack6.text = ""
+        }
     }
     
 }

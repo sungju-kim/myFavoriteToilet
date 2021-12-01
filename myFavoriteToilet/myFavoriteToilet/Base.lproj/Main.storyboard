@@ -177,7 +177,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOy-JQ-rwI">
-                                                        <rect key="frame" x="155.33333333333334" y="0.0" width="47.333333333333343" height="31"/>
+                                                        <rect key="frame" x="155.33333333333334" y="0.0" width="56.666666666666657" height="31"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="☆"/>
@@ -186,7 +186,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-xl-hC3">
-                                                        <rect key="frame" x="232.66666666666666" y="0.0" width="47.666666666666657" height="31"/>
+                                                        <rect key="frame" x="241.99999999999997" y="0.0" width="47.666666666666657" height="31"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="☆"/>
@@ -195,7 +195,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20R-A5-VBy">
-                                                        <rect key="frame" x="310.33333333333331" y="0.0" width="47.666666666666686" height="31"/>
+                                                        <rect key="frame" x="319.66666666666669" y="0.0" width="38.333333333333314" height="31"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="☆"/>
@@ -400,9 +400,16 @@
                         <outlet property="btnThree" destination="wOy-JQ-rwI" id="7aj-D6-eO8"/>
                         <outlet property="btnTwo" destination="Vu5-ou-cJU" id="Qf7-YF-8ur"/>
                         <outlet property="imageView" destination="XNT-Xx-dIU" id="j1J-RL-uA7"/>
+                        <outlet property="stack1" destination="vbL-gI-dt6" id="kGb-0U-a9D"/>
+                        <outlet property="stack2" destination="ALk-Dd-lxM" id="4Oi-AM-RjH"/>
+                        <outlet property="stack3" destination="BcD-Ep-kOx" id="K3I-Cr-zIk"/>
+                        <outlet property="stack4" destination="hD5-0o-HAx" id="jPQ-Dd-jf3"/>
+                        <outlet property="stack5" destination="kmI-0l-hKV" id="6ud-b2-aCQ"/>
+                        <outlet property="stack6" destination="6tt-Sp-BMp" id="rzR-Gy-Aap"/>
                         <outlet property="starRates" destination="SJk-lp-dlS" id="5OP-Nw-Dtb"/>
                         <outlet property="touchedPinSubTitle" destination="mGT-oP-Ido" id="1Ve-fw-5Me"/>
                         <outlet property="touchedPinTitle" destination="1Or-zj-dGH" id="FTr-go-NGI"/>
+                        <outlet property="typeSection" destination="Jq4-bF-pm7" id="RGc-Pb-a0j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gwj-Pq-b4Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
