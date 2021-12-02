@@ -22,6 +22,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         self.labelOne.alpha = 0
         self.labelTwo.alpha = 0
         self.goForIt.alpha = 0
+
         
         
         // Do any additional setup after loading the view.
